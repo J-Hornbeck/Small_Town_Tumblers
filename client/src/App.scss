@@ -1,0 +1,238 @@
+$first-color: #127369;
+$second-color: #10403b;
+$third-color: #8aa6a3;
+$fourth-color: #4c5958;
+$fifth-color: #bfbfbf;
+$t-color: #a5f900;
+$pinkish-color: #f540f5;
+$pinkish2-color: #de2f86;
+
+* {
+  background-color: $second-color;
+}
+
+.App {
+  text-align: center;
+  background-color: $second-color;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "brushtip";
+  src: local("BTCTRIAL"), url(./static/font/BTCTRIAL.ttf) format("ttf");
+}
+
+.font-brush {
+  font-family: brushtip, "Brush Script MT", cursive;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $first-color;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  max-width: 40%;
+}
+
+.btn {
+  background-color: $first-color;
+  border-color: $pinkish2-color;
+  color: $t-color;
+}
+
+.bg-1 {
+  background-color: $first-color;
+}
+.bg-2 {
+  background-color: $second-color;
+}
+.bg-3 {
+  background-color: $third-color;
+}
+.bg-4 {
+  background-color: $fourth-color;
+}
+.bg-5 {
+  background-color: $fifth-color;
+}
+.t-1 {
+  color: $t-color;
+}
+.t-2 {
+  color: $second-color;
+}
+.t-3 {
+  color: $third-color;
+}
+.t-4 {
+  color: $fourth-color;
+}
+.t-5 {
+  color: $fifth-color;
+}
+
+::placeholder,
+label {
+  color: $t-color;
+  text-align: center;
+}
+
+// .Row {
+//   box-shadow: 5px 5px 5px $t-color;
+// }
+
+.Row {
+  box-sizing: content-box;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient($t-color, $pinkish2-color);
+  border-image-slice: 1;
+}
+
+.gradient {
+  box-sizing: content-box;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient($t-color, $pinkish2-color);
+  border-image-slice: 1;
+  color: $t-color;
+  background-color: $fourth-color;
+}
+
+select,
+input {
+  box-sizing: content-box;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient($t-color, $pinkish2-color);
+  border-image-slice: 1;
+  color: $t-color;
+  background-color: $fourth-color;
+}
+
+.column {
+  flex-direction: column;
+}
+
+li,
+ul {
+  color: $t-color;
+  background-color: $second-color;
+  list-style: none;
+  :hover {
+    color: $pinkish2-color;
+  }
+}
+
+::first-letter {
+  color: $pinkish2-color;
+}
+
+Link:visited {
+  color: $pinkish2-color;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.insta {
+  color: white;
+  padding: 4px;
+  border-radius: 25%;
+  width: 2rem;
+  height: 2rem;
+  background-image: radial-gradient(
+    circle at 30% 110%,
+    #ffdb8b 0%,
+    #ee653d 25%,
+    #d42e81 50%,
+    #a237b6 75%,
+    #3e5fbc 100%
+  );
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gallery {
+  height: 100%;
+  width: 100%;
+}
+
+%shared {
+  box-shadow: 2px 2px 10px 5px $pinkish-color;
+  border-radius: 10px;
+}
+* {
+  transition: all 0.5s ease;
+}
+#thumbnails {
+  text-align: center;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    @media only screen and (max-width: 480px) {
+      width: 50px;
+      height: 50px;
+    }
+    @extend %shared;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+#main {
+  width: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  @extend %shared;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+.hidden {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=App.css.map */
